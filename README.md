@@ -1,2 +1,2 @@
 # VirtualBlog
- A vanilla-written project using HTML/SCSS/JS + Gulp.
+ A vanilla-written social-network-like project using HTML/SCSS/JS + Gulp. Ported from GitLab.

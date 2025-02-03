@@ -1,0 +1,23 @@
+let headerLogo = document.getElementById('headerLogo'),
+    mainBlock = document.getElementById('mainBlock'),
+    subBlock = document.getElementById('subBlock'),
+    subBlockCaller = document.getElementById('subBlockCaller'),
+    headerBlock = document.getElementById('headerBlock'),
+    navigationElems = document.getElementsByClassName('navigation__button'),
+    profileNav = document.getElementById('profileNav'),
+    mainPageNav = document.getElementById('mainPageNav'),
+    authorsNav = document.getElementById('authorsNav'),
+    groupsNav = document.getElementById('groupsNav'),
+    profileWrapper = document.getElementById('profileWrapper'),
+    loadingCircle = document.getElementById('loadingCircle'),
+    profileLabel = document.getElementById('profileLabel'),
+    profileOptionProfile = document.getElementById('profileOptionProfile'),
+    profileOptionLogout = document.getElementById('profileOptionLogout'),
+    overlayBlock = document.getElementById('overlayBlock'),
+    postOverlay = document.querySelector('.post-overlay'),
+    modalOverlay = document.querySelector('.modal-overlay'),
+    modalWindow = document.querySelector('.overlay__modal-window'),
+    body = document.querySelector('body');
+
+export { headerLogo, mainBlock, subBlock, subBlockCaller, headerBlock, navigationElems, profileNav, mainPageNav, authorsNav, groupsNav, 
+    profileWrapper, loadingCircle, profileLabel, profileOptionProfile, profileOptionLogout, overlayBlock, modalWindow, postOverlay, modalOverlay, body }

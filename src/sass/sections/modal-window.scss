@@ -1,0 +1,126 @@
+.overlay__modal-window {
+    height: fit-content;
+    width: fit-content;
+	transition: .5s all;
+    padding: 12px;
+    text-align: center;
+
+    .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 52px;
+        font-size: 24px;
+        margin-bottom: 5px;
+        padding: 0 20px;
+
+        &:hover {
+            filter: brightness(1.4);
+            background-color: var(--active-main-button-bg);
+        }
+
+        &:active {
+            scale: .95;
+        }
+    }
+
+    .window {
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login-failed-window {
+        width: 400px !important;
+        height: 160px !important;
+
+        .error-window__error {
+            color: var(--main-text-color) !important;
+            margin-bottom: 20px !important;
+        }
+    }
+
+    .error-window {
+        width: 500px;
+        height: 300px;
+
+        &__error {
+            font-size: 32px;
+            color: var(--capital-letter-color);
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        &__error-code {
+            font-size: 96px;
+            color: var(--active-main-button-bg);
+        }
+
+        &__error-text {
+            font-size: 24px;
+            color: var(--capital-letter-color);
+            translate: 0 -10px;
+            margin-bottom: 10px;
+        }
+
+        &__to-main-page-button {
+            width: fit-content;
+        }
+
+        &__second-action-button {
+            margin-left: 15px;
+            background-color: var(--main-border-color);
+            
+            &:hover {
+                background-color: var(--default-element-highlight);
+            }
+        }
+
+        &__buttons-wrapper {
+            display: flex;
+        }
+    }
+
+    .login-window {
+        width: 540px;
+        height: 280px;
+        translate: 0 -5px;
+
+        &__login-suggestion {
+
+            font-family: 'USSR';
+            font-size: 40px;
+            margin-bottom: 10px;
+
+            &-info {
+                font-size: 24px;
+            }
+            
+            &-text {
+                font-size: 24px;
+                color: var(--capital-letter-color);
+                margin-top: 10px;
+            }
+        }
+
+        &__login {
+            width: fit-content;
+        }
+
+        &__back {
+            width: fit-content;
+            margin-left: 20px;
+            background-color: var(--main-border-color);
+            
+            &:hover {
+                background-color: var(--default-element-highlight);
+            }
+        }
+
+        &__buttons-wrapper {
+            display: flex;
+            margin-top: 20px;
+        }
+    }
+}

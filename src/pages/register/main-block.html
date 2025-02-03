@@ -1,0 +1,43 @@
+<div class="register">
+    <div class="form-container container">
+        <div class="form-title">Регистрация</div>
+        <form id="registerForm" class="register-form">
+            <div class="form-input-container">
+                <span class="form-input__input-label form-input__input-label_required" title="Имя пользователя должно быть не короче одного и не длиннее 1000 символов.">Имя пользователя</span>
+                <input class="form-input__input" id="username" type="text" placeholder="Алексеев Борис Витальевич" />
+                <div class="form-input__line"></div>
+            </div>
+            <div class="form-input-container">
+                <span class="form-input__input-label" title="Для регистрации на VB вам не может быть меньше 18-ти полных лет.">Дата рождения</span>
+                <input class="form-input__input" id="birthDate" type="date" placeholder="ДД.ММ.ГГГГ" />
+                <div class="form-input__line"></div>
+            </div>
+            <div class="form-input-container">
+                <span class="form-input__input-label form-input__input-label_required" title="К сожалению, в VB на текущий момент не предусмотрена регистрация небинарных персон. Приносим свои извинения за это досадное неудобство.">Пол</span>
+                <div class="select-wrapper">
+                    <select class="select" id="gender">
+                        <option>Мужской</option>
+                        <option>Женский</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-input-container">
+                <span class="form-input__input-label" title="Ваш номер телефона должен соответствовать маске: +7 (XXX) XXX-XX-XX">Телефон</span>
+                <input class="form-input__input" id="phoneNumber" type="tel" placeholder="+7 (XXX) XXX-XX-XX" />
+                <div class="form-input__line"></div>
+            </div>
+            <div class="form-input-container">
+                <span class="form-input__input-label form-input__input-label_required" title="Адрес электронной почты должен быть существующим.">Email</span>
+                <input class="form-input__input" id="email" type="email" placeholder="name@example.com" />
+                <div class="form-input__line"></div>
+                <div class="form-input__hint">Email будет использован для входа в систему</div>
+            </div>
+            <div class="form-input-container">
+                <span class="form-input__input-label form-input__input-label_required" title="Придумайте пароль, состоящий не менее чем из 6-ти символов, с как минимум: одной цифрой, одним спец. символом и одной заглавной буквой.">Пароль</span>
+                <input class="form-input__input" id="password" type="password" placeholder="********" />
+                <div class="form-input__line"></div>
+            </div>
+            <input id="registerSubmit" class="form-submit button" type="submit" value="создать аккаунт" />
+        </form>
+    </div>
+</div>

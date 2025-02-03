@@ -1,0 +1,65 @@
+.log-in {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__logo-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 280px;
+        margin: 50px 0;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    &__logo-title {
+
+        font-family: 'USSR';
+        font-size: 13px;
+        user-select: none;
+
+        &_big {
+            font-size: 28px;
+        }
+    }
+
+    &__logo-image {
+        width: 90px;
+    }
+
+    .form-submit {
+        margin-top: 20px;
+    }
+
+    .button:active {
+        scale: .95;
+    }
+
+    #logInSubmit.processing {
+        background-color: var(--inactive-button-bg-opaque) !important;
+        cursor: default !important;
+        pointer-events: none !important;
+        opacity: .7;
+    }
+}
+
+.register-button {
+
+    background-color: var(--secondary-button-bg);
+    margin-top: 16px;
+
+    &:hover {
+        filter: brightness(110%);
+        // animation: wiggle ease-in-out .5s 1 normal;
+    }
+
+    &.processing {
+        background-color: var(--inactive-button-bg-opaque) !important;
+        cursor: default !important;
+        pointer-events: none !important;
+        opacity: .7;
+    }
+}

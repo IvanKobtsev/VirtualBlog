@@ -1,0 +1,26 @@
+.create-post {
+
+    width: 100%;
+
+    .form-input {
+
+        &-container {
+        
+            margin-top: 0;
+
+            &_inline {
+                width: 40px;
+                display: inline;
+                position: relative;
+            }
+        }
+    }
+
+    .form-input__input_multiline,
+    .input-tags,
+    .input-tags-selecter {
+        background: var(--main-border-color);
+        border-radius: 12px;
+        border: 1px solid var(--icon-color);
+    }
+}

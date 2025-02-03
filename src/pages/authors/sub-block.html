@@ -1,0 +1,26 @@
+<div class="authors-actions actions">
+    <div class="actions-title">Фильтрация</div>
+    <div class="actions-group form">
+        <div class="form-input-container">
+            <input class="form-input__input" id="filterUsername" type="text" placeholder="Имя автора" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container no-offset">
+            <div class="checkbox-wrapper">
+                <input id="filterHasLikes" class="form-input__input checkbox" type="checkbox" />
+                Есть лайки
+            </div>
+        </div>
+    </div>
+    <div class="actions-title">Сортировка</div>
+    <div class="form-input-container">
+        <div class="select-wrapper">
+            <select class="select" id="authorSort">
+                <option value="alphabeticallyAsc">По имени</option>
+                <option value="alphabeticallyDesc">По имени (с конца)</option>
+                <option value="ratingAsc">По рейтингу</option>
+                <option value="ratingDesc">По рейтингу (с конца)</option>
+            </select>
+        </div>
+    </div>
+</div>

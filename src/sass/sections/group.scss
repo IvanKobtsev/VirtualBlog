@@ -1,0 +1,85 @@
+.group-info-block {
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    height: fit-content;
+    background: none;
+    border: none;
+
+    &__name {
+        font-size: 34px;
+        translate: 0 -4px;
+
+        &::before {
+            translate: 0 2px;
+        }
+    }
+
+    #subscribersValue {
+        margin-left: 5px;
+        margin-right: 6px;
+    }
+
+    &__admins-container {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .author {
+        z-index: 0;
+        
+        &__posts-and-likes {
+            display: none;
+        }
+    }
+
+    .author:last-child {
+        margin-bottom: 0;
+    }
+
+    &__other-info-title {
+        margin: 8px 0 0 12px;
+    }
+}
+
+.group-actions {
+
+    font-size: 18px !important;
+
+    #groupActionSubscribe {
+        justify-content: center;
+        background-color: var(--active-main-button-bg);
+        transition: .2s all;
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    #groupActionCreatePost {
+        margin-bottom: 10px;
+        
+        &::before {
+            background: url('../../img/svg/ProfileEdit.svg');
+        }
+    }
+
+    .form-input-container {
+        margin-bottom: 15px;
+    }
+
+    #groupActionSubscribe {
+
+        margin-bottom: 20px;
+
+        &.profile-actions__action_active {
+            background-color: var(--secondary-button-bg);
+        }
+    }
+}

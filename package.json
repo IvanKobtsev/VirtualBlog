@@ -1,0 +1,29 @@
+{
+  "name": "boringalgs",
+  "version": "1.0.0",
+  "description": "hopefully the interactive experience that will make all these algorithms interesting for real",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Xubarashi",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webserver": "^0.9.1",
+    "sass": "^1.72.0"
+  },
+  "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
+    "htmlmin": "^0.0.7",
+    "imagemin": "^9.0.0"
+  }
+}

@@ -1,0 +1,395 @@
+@media (max-width: 1000px) {
+
+    .feed__add-post::after {
+        display: none;
+    }
+
+    header {
+
+        .header-block {
+            justify-content: space-around;
+        }
+    }
+
+    body {
+
+        &:has(.sub-block.show) {
+            overflow: hidden;
+        }
+
+        .main-block {
+            z-index: 0;
+        }
+
+        .sub-block {
+            display: flex;
+            pointer-events: none;
+            position: fixed;
+            z-index: 30;
+            top: 70px;
+            left: 50%;
+            translate: -50% 0;
+            width: 100vw;
+            height: calc(100vh - 130px);
+            background-color: rgba(0, 0, 0, .8);
+            backdrop-filter: blur(10px);
+            justify-content: flex-end;
+            padding: 20px 20px 0 0;
+            opacity: 0;
+            transition: .5s all;
+
+            &.shown {
+                
+                &:has(.actions) {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+
+                & + .menu-button {
+                    right: 255px;
+                    background-image: url('../../img/svg/CloseReply.svg');
+                    background-size: 30px;
+                }
+            }
+
+            &:has(.actions) {
+                & + .menu-button {
+                    opacity: 1;
+                    pointer-events: all;
+                }
+            }
+
+            &.hidden {
+                opacity: 0 !important;
+                translate: -50% 0 !important;
+
+                & + .menu-button {
+                    opacity: 0 !important;
+                    pointer-events: none !important;
+                }
+            }
+
+            .actions {
+                width: 205px;
+            }
+        }
+    }
+    
+    .overlay-block {
+        width: 550px;
+    }
+
+    .comment__content {
+        width: 460px;
+    }
+    
+    .comments__replies .comment__content {
+        width: 410px;
+    }
+
+    .full-post .post__tags-wrapper {
+        max-width: 300px;
+    }
+
+    .post__image {
+        pointer-events: none;
+    }
+
+    .fixed-blocks-container {
+        z-index: 10;
+
+        .menu-button {
+            display: block !important;
+            position: fixed;
+            top: 85px;
+            transition: .5s all;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            background: url('../img/svg/Menu.svg') var(--elements-bg-color);
+            border: 1px solid var(--main-border-color);
+            z-index: 30;
+            border-radius: 50px;
+            background-size: 40px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            box-shadow: 0 0 5px 0 rgba(0, 0, 0, .8);
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .navigation {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 60px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--elements-bg-color);
+        border: 1px solid var(--main-border-color);
+        box-sizing: border-box;
+
+        &__button {
+            margin-bottom: 0 !important;
+        }
+    }
+
+    .main-block {
+        margin-bottom: 75px;
+
+        .group-info-block,
+        .profile {
+            overflow: hidden;
+        } 
+    }
+
+    .feed__add-post {
+        filter: brightness(1.1);
+        background-color: var(--active-main-button-bg);
+        padding-right: 0;
+        padding-left: 50px;
+        &::after {
+            left: -90%;
+            background-color: var(--active-main-button-bg);
+            box-shadow: 0 0 10px 10px var(--active-main-button-bg);
+        }
+        
+        .feed__add-post-icon {
+            left: 26%;
+        }
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+        .header-block {
+            &__logo-container {
+                width: fit-content;
+            }
+            &__logo-span {
+                display: none;
+            }
+        }
+    }
+
+    .navigation {
+        &__label {
+            display: none;
+        }
+
+        &__button {
+            
+            width: 50px !important;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 12px;
+
+            &_selected {
+                background-color: var(--main-border-color);
+                filter: brightness(1.2);
+            }
+
+            &__icon {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    .overlay__modal-window {
+        scale: .7;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    .log-in {
+        scale: .8;
+    }
+
+    header {
+        height: 60px;
+    
+        .header-block__logo-image {
+            scale: .8;
+        }
+    
+        .profile-icon {
+            scale: .8;
+            margin: 0 5px;
+        }
+
+        .profile-container__profile-options-icon {
+            scale: .8;
+        }
+    
+        .header-block__profile-wrapper {
+            font-size: 16px !important;
+        }
+    }
+
+    body {
+        .main-block {
+            width: 100vw;
+        }
+
+        .overlay {
+            top: 60px;
+        }
+
+        .sub-block {
+            top: 60px;
+            height: calc(100vh - 120px);
+        }
+
+        .author__name,
+        .group__name {
+            font-size: 16px;
+
+            &::before {
+                scale: .8;
+                translate: 0 -6px;
+            }
+
+            &::after {
+                font-size: 18px;
+            }
+        }
+
+        .author__birth-date,
+        .group__subs-count {
+            font-size: 14px;
+        }
+
+        .group__subscribe-button {
+            scale: .8;
+            font-size: 16px;
+        }
+
+        #username,
+        #groupName {
+            font-size: 26px;
+            margin-top: 20px;
+            &::before {
+                translate: 0 3px;
+            }
+        }
+
+        .group-info-block,
+        .profile {
+            .profile__est-date,
+            .group-info-block__subscribers-count,
+            #email,
+            #groupStatus {
+                font-size: 16px;
+            }
+        }
+
+
+        .post__tags-and-read-time-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+
+            .post__read-time {
+                margin-top: 10px;
+            }
+        }
+    }
+    
+
+    .overlay-block {
+        width: 400px;
+    }
+
+    .comment__content {
+        width: 310px;
+    }
+    
+    .comments__replies .comment__content {
+        width: 260px;
+    }
+
+    .full-post .post__tags-wrapper {
+        max-width: fit-content;
+    }
+
+    .comment__buttons {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            margin-top: 5px;
+            width: fit-content;
+        }
+    }
+
+    .feed__add-post .feed__add-post-icon {
+        left: 20%;
+    }
+
+    .overlay-block {
+        position: relative;
+        margin-top: 50px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: 10px;
+            background: url('../img/svg/CloseReply.svg');
+            background-size: cover;
+            pointer-events: none;
+            width: 40px;
+            height: 40px;
+            z-index: 10;
+        }
+    }
+
+    .menu-button {
+        top: 70px !important;
+    }
+
+    .feed__add-post:hover {
+        .feed__add-post-icon {
+            left: 20%;
+        }
+    }
+
+    .comment__author-name {
+        font-size: 15px;
+    }
+
+    .comment__text {
+        font-size: 14px;
+    }
+
+    .comment__buttons {
+        font-size: 16px;
+
+        div {
+            margin-top: 0;
+        }
+
+        div::after {
+            scale: .7;
+        }
+    }
+
+    .comment__time {
+        font-size: 14px;
+    }
+
+    .comment__edited {
+        font-size: 14px;
+        translate: 0;
+        margin: 0;
+    }
+}

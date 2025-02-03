@@ -1,0 +1,187 @@
+.profile,
+.group-info-block {
+
+    &__main-info {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        font-size: 20px;
+
+        &-wrapper {
+            margin-top: 25px;
+            margin-left: 15px;
+        }
+    }
+
+    &__profile-icon,
+    &__group-icon {
+        width: 150px;
+        height: 150px;
+        font-family: 'USSR';
+        font-size: 96px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--active-main-button-bg);
+        border-radius: 150px;
+        z-index: 1;
+        user-select: none;
+        overflow: hidden;
+    }
+
+    &__username,
+    &__name {
+        font-size: 48px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            width: 150%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--icon-color) 0%, transparent 100%);
+            bottom: 5px;
+            right: -40%;
+            z-index: -1;
+        }
+    }
+
+    &__email,
+    &__status {
+        position: relative;
+        translate: -5px 0;
+        margin-bottom: 10px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 130%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--icon-color) 0%, transparent 100%);
+            bottom: -4px;
+            right: -20%;
+            z-index: -1;
+        }
+    }
+
+    &__est-date,
+    &__subscribers-count {
+        position: relative;
+        translate: -15px 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 1px;
+            background: linear-gradient(90deg, var(--icon-color) 0%, transparent 100%);
+            bottom: -2px;
+            right: 10%;
+            z-index: -1;
+        }
+    }
+
+    &__other-info {
+
+        &-container {
+            margin-top: 20px;
+            padding: 12px 16px 16px 16px;
+        }
+
+        &-title {
+            font-size: 32px;
+            color: var(--capital-letter-color);
+            margin-bottom: 7px;
+        }
+
+        &-entry {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 20px;
+            margin-top: 10px;
+            position: relative;
+
+            &-name {
+                
+
+                &::first-letter {
+                    font-size: 24px;
+                    color: var(--capital-letter-color);
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                background-color: var(--icon-color);
+                bottom: -2px;
+            }
+        }
+
+    }
+}
+
+.profile-actions {
+
+    .group__subscribe-button_active {
+        background-color: var(--secondary-button-bg) !important;
+    }
+
+    &__action {
+        
+        width: 100%;
+        height: 34px;
+        font-size: 16px;
+        border-radius: 6px;
+        background-color: var(--elements-bg-color);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 8px;
+        padding-top: 2px;
+        box-sizing: border-box;
+
+        &::before {
+            content: "";
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+            translate: 0 -2px;
+        }
+
+        &#profileActionLogout {
+            background-color: var(--capital-letter-color);
+            
+            &:hover {
+                background-color: var(--active-main-button-bg);
+            }
+        
+            &::before {
+                background: url('../img/svg/Logout.svg');
+            }
+        }
+
+        &#profileActionEdit::before {
+            background: url('../img/svg/ProfileEdit.svg');
+        }
+
+        &#profileActionGroups::before {
+            background: url('../img/svg/MyGroups.svg');
+        }
+
+        &#profileActionPosts::before {
+            background: url('../img/svg/MyPosts.svg');
+        }
+    }
+
+    &__delimiter {
+        height: 1px;
+        width: 100%;
+        background-color: var(--icon-color);
+        margin: 12px 0;
+    }
+}

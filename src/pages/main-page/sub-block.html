@@ -1,0 +1,72 @@
+<div class="main-page-actions actions">
+    <div class="actions-title">Фильтрация</div>
+    <div class="actions-group form">
+        <div class="form-input-container">
+            <input class="form-input__input" id="filterUsername" type="text" placeholder="Имя автора" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="actions-group-delimiter"></div>
+        <div class="form-input-container no-offset">
+            <div class="checkbox-wrapper">
+                <input id="filterMyGroups" class="form-input__input checkbox" type="checkbox" />
+                Мои группы
+            </div>
+        </div>
+        <div class="actions-group-delimiter"></div>
+        <div class="form-input-container">
+            Время чтения:
+            <div class="form-input__inline-wrapper">
+                от
+                <div class="form-input-container form-input-container_inline"><input class="form-input__input form-input__input_inline" type="text" id="filterReadingTimeMin" placeholder="0" /><div class="form-input__line"></div></div>
+                до
+                <div class="form-input-container form-input-container_inline"><input class="form-input__input form-input__input_inline" type="text" id="filterReadingTimeMax" placeholder="∞" /><div class="form-input__line"></div></div> 
+            </div>
+        </div>
+        <div class="actions-group-delimiter"></div>
+        <div class="form-input-container">
+            Тэги
+            <div class="input-tags"><div class="input-tags__add-tag clickable"></div><div class="no-tags">[пусто]</div></div>
+            <div class="input-tags-selecter input-tags-selecter_hidden">
+                <div class="form-input-container">
+                    <input class="form-input__input" id="tagSearch" type="text" placeholder="Название тэга" />
+                    <div class="form-input__line"></div>
+                </div>
+                <div class="input-tags__selectable-tags loading"></div>
+            </div>
+        </div>
+        <div class="clickable button form-submit">Применить</div>
+    </div>
+    <div class="actions-title">Сортировка</div>
+    <div class="form-input-container">
+        <div class="select-wrapper">
+            <select class="select" id="postSort">
+                <option value="CreateDesc">Сначала новые</option>
+                <option value="CreateAsc">Сначала старые</option>
+                <option value="LikeDesc">По лайкам</option>
+                <option value="LikeAsc">По лайкам (с конца)</option>
+            </select>
+        </div>
+    </div>
+    <div class="actions-title">Страницы</div>
+    <div class="actions-group form pagination">
+        <div class="form-input-container">
+            Постов на странице
+            <div class="select-wrapper">
+                <select class="select" id="pageSize">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                </select>
+            </div>
+            Текущая страница
+            <div class="select-wrapper">
+                <select class="select" id="currentPage">
+                    <option value="1">1</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>

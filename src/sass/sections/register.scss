@@ -1,0 +1,22 @@
+.register {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .select-wrapper {
+        translate: 0 8px;
+
+        &::after {
+            top: 20px;
+        }
+    }
+
+    .select {
+        margin-top: 0px;
+    }
+
+    .button:active {
+        scale: .95;
+    }
+}

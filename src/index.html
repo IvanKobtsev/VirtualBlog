@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <link rel="stylesheet" href="css/style.min.css">
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="favicon/favicon-48x48.png" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="VirtualBlog" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!---->
+    <title>VirtualBlog</title>
+</head>
+
+<body>
+    <header>
+        <div id="headerBlock" class="header-block">
+            <div id="headerLogo" class="header-block__logo-container">
+                <img class="header-block__logo-image" src="img/static/vb-logo.png" />
+                <span class="header-block__logo-span">virtualblog</span>
+            </div>
+            <div class="header-block__profile-wrapper clickable" id="profileWrapper"></div>
+            <div class="profile-options-wrapper">
+                <div class="profile-options-wrapper__profile-option clickable" id="profileOptionProfile">Профиль</div>
+                <div class="profile-options-wrapper__profile-option clickable" id="profileOptionLogout">Выйти</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOADING OVERLAY -->
+    <div id="loadingCircle"></div>
+        
+    <!-- NAVIGATION AND SUB-BLOCK -->
+    <div class="fixed-blocks-container">
+        <div class="navigation" id="navigation">
+            <div id="profileNav" class="navigation__button profile-button"><div class="navigation__button__icon profile-button__icon"></div><div class="navigation__label" id="profileLabel">Авторизация</div></div>
+            <div id="mainPageNav" class="navigation__button main-page-button navigation__button_selected"><div class="navigation__button__icon main-page-button__icon"></div><div class="navigation__label">Главная</div></div>
+            <div id="authorsNav" class="navigation__button authors-button"><div class="navigation__button__icon authors-button__icon"></div><div class="navigation__label">Авторы</div></div>
+            <div id="groupsNav" class="navigation__button groups-button"><div class="navigation__button__icon groups-button__icon"></div><div class="navigation__label">Группы</div></div>
+        </div>
+        <div class="sub-block" id="subBlock"></div>
+        <div class="menu-button" id="subBlockCaller"></div>
+    </div>
+
+    <!-- MAIN BLOCK -->
+    <div class="main-block" id="mainBlock"></div>
+
+    <div class="overlay post-overlay center-children hidden">
+        <div class="overlay-block container" id="overlayBlock">
+            
+        </div>
+    </div>
+
+    <div class="overlay modal-overlay hidden center-children">
+        <div class="overlay__modal-window container">
+            
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-block" id="footer">
+            <div class="copyright">© 2024 — VirtualBlog. Все права нарушены</div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/index.js"></script>
+</body>
+
+</html>

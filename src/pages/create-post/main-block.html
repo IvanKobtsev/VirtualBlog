@@ -1,0 +1,44 @@
+<div class="create-post form-container container">
+    <form id="createPostForm" class="create-post">
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Название поста должен быть не короче пяти и не длиннее 1000 символов.">Название поста</span>
+            <input class="form-input__input" id="postTitle" type="text" placeholder="Мой новый пост" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Текст поста должен быть не короче пяти и не длиннее 5000 символов.">Текст</span>
+            <textarea class="form-input__input form-input__input_multiline" id="postDescription" type="text" placeholder="Расскажите о чём угодно..."></textarea>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Целое число минут, необходимых для чтения поста.">Время чтения</span>
+            <div class="form-input__inline-wrapper"><div class="form-input-container form-input-container_inline"><input class="form-input__input form-input__input_inline" type="number" id="postReadingTime" placeholder="0" /><div class="form-input__line"></div></div>мин.</div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Тэги, характеризующие материал в посте. Необходим как минимум 1.">Тэги</span>
+            <div class="input-tags"><div class="input-tags__add-tag clickable"></div><div class="no-tags">[пусто]</div></div>
+            <div class="input-tags-selecter input-tags-selecter_hidden">
+                <div class="form-input-container">
+                    <input class="form-input__input" id="tagSearch" type="text" placeholder="Название тэга" />
+                    <div class="form-input__line"></div>
+                </div>
+                <div class="input-tags__selectable-tags loading"></div>
+            </div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label" title="Предоставляемый URL не должен превышать 1000 символов в длине.">Ссылка на картинку</span>
+            <input class="form-input__input" id="postImageLink" type="text" placeholder="https://www.example.com/my_image.jpeg" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label" title="Группа, в которой будет опубликован пост.">Группа</span>
+            <div class="select-wrapper">
+                <select class="select" id="postGroup">
+                    <option value="null">Личный пост</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-input-container" id="addressSelects">
+            <span class="form-input__input-label" title="Адрес поста. Нет необходимости задавать его точно.">Адрес</span>
+        </div>
+    </form>
+</div>

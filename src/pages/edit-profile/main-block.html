@@ -1,0 +1,33 @@
+<div class="edit-profile form-container container">
+    <form id="editProfileForm" class="edit-profile">
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Имя пользователя должно быть не короче одного и не длиннее 1000 символов.">Имя пользователя</span>
+            <input class="form-input__input" id="profileUsername" type="text" placeholder="Алексеев Борис Витальевич" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="Адрес электронной почты должен быть существующим.">Email</span>
+            <input class="form-input__input" id="profileEmail" type="email" placeholder="name@example.com" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label" title="Для регистрации на VB вам не может быть меньше 18-ти полных лет.">Дата рождения</span>
+            <input class="form-input__input" id="profileBirthDate" type="date" placeholder="ДД.ММ.ГГГГ" />
+            <div class="form-input__line"></div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label form-input__input-label_required" title="К сожалению, в VB на текущий момент не предусмотрена регистрация небинарных персон. Приносим свои извинения за это досадное неудобство.">Пол</span>
+            <div class="select-wrapper">
+                <select class="select" id="profileGender">
+                    <option value="Male">Мужской</option>
+                    <option value="Female">Женский</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-input-container">
+            <span class="form-input__input-label" title="Ваш номер телефона должен соответствовать маске: +7 (XXX) XXX-XX-XX">Телефон</span>
+            <input class="form-input__input" id="profilePhoneNumber" type="tel" placeholder="+7 (XXX) XXX-XX-XX" />
+            <div class="form-input__line"></div>
+        </div>
+    </form>
+</div>
